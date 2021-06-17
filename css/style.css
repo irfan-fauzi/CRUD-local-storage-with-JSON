@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+my-header {
+  display: block;
+  background: #a200ff;
+}
+
+my-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+main-form {
+  display: block;
+  margin: 1rem;
+}
+
+main-form .formContent {
+  border: #ebe3e3 solid 1px;
+  max-width: 700px;
+  margin: auto;
+  background: #ebe5e5;
+}
+
+main-form .formContent .form-element {
+  color: #978888;
+  margin: 1rem;
+}
+
+main-form .formContent .form-element input:nth-child(3) {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+main-form .formContent .form-element input:nth-child(1) {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.tugas-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.tugas-container h2 {
+  color: #afafaf;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.tugas-container todo-list {
+  margin: 1rem 0;
+  display: block;
+  border: #c2bebe solid 1px;
+}
+
+item-tugas {
+  display: block;
+  margin: 10px;
+  border: red solid 1px;
+  padding: 10px;
+}
+
+item-tugas .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+}
+
+item-tugas .list-item .tugas {
+  color: #919191;
+}
+
+item-tugas .list-item .tgl {
+  font-weight: 200;
+  color: #919191;
+  margin-top: 5px;
+}
+
+item-tugas .list-item .fa-check-circle {
+  color: #919191;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=style.css.map */

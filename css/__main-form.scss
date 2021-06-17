@@ -1,0 +1,25 @@
+main-form{
+  display: block;
+  margin: 1rem;
+  .formContent{
+    border: rgb(235, 227, 227) solid 1px;
+    max-width: 700px;
+    margin: auto;
+    background: rgb(235, 229, 229);
+
+    .form-element{
+      //border: rgb(167, 159, 159) solid 1px;
+      color: rgb(151, 136, 136);
+      margin: 1rem;
+      input:nth-child(3){
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+      }
+      input:nth-child(1){
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

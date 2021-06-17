@@ -1,0 +1,10 @@
+my-header{
+  display: block;
+  background: rgb(162, 0, 255);
+  .container{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 1rem;
+  }
+}

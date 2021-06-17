@@ -1,0 +1,17 @@
+.tugas-container{
+  //border: rgb(194, 190, 190) solid 1px;
+  max-width: 700px;
+  margin: auto;
+  h2{
+    color: rgb(175, 175, 175);
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  todo-list{
+    margin: 1rem 0;
+    display: block;
+    border: rgb(194, 190, 190) solid 1px;
+   
+  }
+}

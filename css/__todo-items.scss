@@ -1,0 +1,24 @@
+item-tugas{
+  display: block;
+  margin: 10px;
+  border: red solid 1px;
+  padding: 10px;
+  .list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    .tugas{
+      color: rgb(145, 145, 145);
+    }
+    .tgl{
+      font-weight: 200;
+      color: rgb(145, 145, 145);
+      margin-top: 5px;
+    }
+    .fa-check-circle{
+      color: rgb(145, 145, 145);
+      font-size: 2rem;
+    }
+  }
+}
