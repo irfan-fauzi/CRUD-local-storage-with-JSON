@@ -77,7 +77,7 @@ main-form .formContent .form-element input:nth-child(1) {
 item-tugas {
   display: block;
   margin: 10px;
-  border: red solid 1px;
+  border: #999595 solid 1px;
   padding: 10px;
 }
 
