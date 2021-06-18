@@ -4,6 +4,11 @@ class TodoItem extends HTMLElement{
     this._dataTugas = data;
     this.render();
   }
+
+  set eventItem(item){
+    this._eventItem = item;
+  }
+
   render(){
     this.innerHTML = `
     <div class="list-item">
@@ -19,6 +24,7 @@ class TodoItem extends HTMLElement{
     </div>
     
     `;
+   this.querySelector('.check-btn').addEventListener('click', (e) => this._eventItem(e))
   }
   
 }
