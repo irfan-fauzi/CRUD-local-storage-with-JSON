@@ -1,0 +1,56 @@
+.tugas-finish{
+  max-width: 700px;
+  margin: auto;
+  h3{
+    color: rgb(175, 175, 175);
+    letter-spacing: 1px;
+    //text-align: center;
+    text-transform: capitalize;
+  }
+  todo-finish{
+    margin: 1rem 0;
+    display: block;
+    border: rgb(194, 190, 190) solid 1px;
+  }
+}
+finish-item{
+  display: block;
+  margin: 10px;
+  border: rgb(153, 149, 149) solid 1px;
+  padding: 10px;
+  background-color: rgb(233, 233, 233);
+  .list-item{
+    display: flex;
+    
+    justify-content: space-between;
+   
+    margin: 10px 0;
+    .text-wrap{
+     // border: red solid 1px;
+      text-align: left;
+    }
+    .icon-wrap{
+     // border: red solid 1px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .tugas{
+      color: rgb(153, 149, 149);
+    }
+    .tgl{
+      font-weight: 200;
+      color: rgb(145, 145, 145);
+      margin-top: 5px;
+    }
+    i{
+      color: rgb(145, 145, 145);
+      font-size: 2rem;
+      transition: 0.3s;
+      &:hover{
+        color: black;
+      }
+    }
+  }
+}
