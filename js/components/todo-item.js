@@ -11,6 +11,7 @@ class TodoItem extends HTMLElement{
 
   render(){
     this.innerHTML = `
+    
     <div class="list-item">
       <div class="text-wrap">
         <h3 class="tugas" >${this._dataTugas.tugas}</h3>

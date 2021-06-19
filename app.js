@@ -28,6 +28,8 @@ class Todo {
         this.store.push(myObj);
         this.setLocalStorage(this.store);
         this.renderItem()
+
+        this.mainForm.clear()
         e.preventDefault()
       }
     };
@@ -71,13 +73,34 @@ class Todo {
   }
 
   eventUndoTugas(){
+    this.todoFinishList.undoEvent = (e) => {
+      const target = e.target.parentElement.parentElement.parentElement.parentElement._dataFinish;
 
+      const i = this.finishStore.indexOf(target)
+      let newArr = this.finishStore.splice(i, 1)
+      this.store.push(newArr[0])
+      this.renderFinishItem()
+      this.renderItem()
+    
+    }
+  }
+
+  eventDeleteTugas(){
+    this.todoFinishList.deleteEvent = (e) => {
+      const target = e.target.parentElement.parentElement.parentElement.parentElement._dataFinish;
+      const i = this.finishStore.indexOf(target);
+      this.finishStore.splice(i, 1)
+      this.renderFinishItem()
+      this.renderItem()
+    }
   }
 }
 
 const todo = new Todo();
 todo.eventSubmit();
 todo.eventFinishTask();
+todo.eventUndoTugas();
+todo.eventDeleteTugas();
 todo.getLocalStorageDaftarTugas();
 todo.renderItem();
 

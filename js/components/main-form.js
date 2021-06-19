@@ -21,10 +21,6 @@ class MainForm extends HTMLElement{
     return this.querySelector('#tgl').value;
   }
  
-  disconnctedCallback(){
-    console.log("clear")
-  }
-
 
   render(){
     this.innerHTML = `

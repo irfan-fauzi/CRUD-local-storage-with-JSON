@@ -7,6 +7,13 @@ class TodoFinish extends HTMLElement{
     this.render()
   }
 
+  set undoEvent(val){
+    this._undoEvent = val
+  }
+
+  set deleteEvent(event){
+    this._deleteEvent = event;
+  }
   // connectedCallback(){
   //   this.render()
   // }
@@ -16,6 +23,8 @@ class TodoFinish extends HTMLElement{
     this._dataFinish.forEach(el => {
       const finishElement = document.createElement('finish-item');
       finishElement.dataFinish = el;
+      finishElement.undoEvent = this._undoEvent;
+      finishElement.deleteEvent = this._deleteEvent;
       this.appendChild(finishElement)
     })
   }
