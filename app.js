@@ -73,16 +73,12 @@ class Todo {
 
       let i = this.store.indexOf(specifyVal)
       let newArr = this.store.splice(i,1);
-      // this.getLocalStorageDaftarTugasFinish();
-      
-      // this.setLocalStorage(this.finishStore);
-      
+      this.setLocalStorage(this.store)
       this.finishStore.push(newArr[0])
-
       this.setLocalStorageTugasFinish(this.finishStore)
       this.renderItem()
       this.renderFinishItem()
-      console.log(this.finishStore)
+      
       
     } 
   }
@@ -93,7 +89,9 @@ class Todo {
 
       const i = this.finishStore.indexOf(target)
       let newArr = this.finishStore.splice(i, 1)
+      this.setLocalStorageTugasFinish(this.finishStore)
       this.store.push(newArr[0])
+      this.setLocalStorage(this.store)
       this.renderFinishItem()
       this.renderItem()
     
@@ -105,6 +103,7 @@ class Todo {
       const target = e.target.parentElement.parentElement.parentElement.parentElement._dataFinish;
       const i = this.finishStore.indexOf(target);
       this.finishStore.splice(i, 1)
+      this.setLocalStorageTugasFinish(this.finishStore)
       this.renderFinishItem()
       this.renderItem()
     }
