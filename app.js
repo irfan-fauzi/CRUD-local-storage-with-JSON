@@ -41,14 +41,23 @@ class Todo {
     this.store = JSON.parse(localStorage.getItem('session')) || [];
   }
 
+  getLocalStorageDaftarTugasFinish(){
+    this.finishStore = JSON.parse(localStorage.getItem('finish')) || [];
+  }
+
   // isi / write data local storage
   setLocalStorage(dataBase){
     localStorage.setItem('session', JSON.stringify(dataBase));
   }
 
+  setLocalStorageTugasFinish(dataBase){
+    localStorage.setItem('finish', JSON.stringify(dataBase));
+  }
+
   // render daftar tugas saya
   renderItem(){
     this.todoList.dataTugas = this.store;
+    
   }
 
   // render daftar tugas yang selesai
@@ -64,10 +73,16 @@ class Todo {
 
       let i = this.store.indexOf(specifyVal)
       let newArr = this.store.splice(i,1);
+      // this.getLocalStorageDaftarTugasFinish();
+      
+      // this.setLocalStorage(this.finishStore);
+      
       this.finishStore.push(newArr[0])
 
-      this.renderFinishItem()
+      this.setLocalStorageTugasFinish(this.finishStore)
       this.renderItem()
+      this.renderFinishItem()
+      console.log(this.finishStore)
       
     } 
   }
@@ -102,5 +117,6 @@ todo.eventFinishTask();
 todo.eventUndoTugas();
 todo.eventDeleteTugas();
 todo.getLocalStorageDaftarTugas();
+todo.getLocalStorageDaftarTugasFinish();
 todo.renderItem();
-
+todo.renderFinishItem();
